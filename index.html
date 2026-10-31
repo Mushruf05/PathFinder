@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PathFinder | Career Guidance</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="#home">pathfinder<span>.AI</span></a>
+    <button class="menu-button" id="menuButton" aria-label="Toggle navigation">☰</button>
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#assessment">Assessment</a>
+      <a href="#careers">Careers</a>
+      <a href="#streams">Streams</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#chatbot">PathFinder AI</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR FUTURE STARTS HERE</p>
+        <h1>pathfinder<br><span>Explore your future.</span></h1>
+        <p>
+          A friendly career guidance companion for students in
+          Grades 9–12. Discover your strengths, explore career
+          possibilities and plan your next steps.
+        </p>
+        <a href="#assessment" class="button">Discover My Career →</a>
+        <a href="#careers" class="button button-outline">Explore Careers</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon">✦</div>
+        <p class="eyebrow">YOUR JOURNEY</p>
+        <h2>Your interests matter.</h2>
+        <p>There is more than one path to a successful future.</p>
+        <div class="mini-progress"><span></span></div>
+        <p class="small">Explore. Learn. Plan. Grow.</p>
+      </div>
+    </section>
+
+    <section class="section" id="dashboard">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR WORKSPACE</p>
+        <h2>Welcome to your career journey</h2>
+        <p>Start exploring at your own pace.</p>
+      </div>
+
+      <div class="stats">
+        <article class="stat-card">
+          <span>🧠</span><h3 id="assessmentStatus">Not started</h3>
+          <p>Interest assessment</p>
+        </article>
+        <article class="stat-card">
+          <span>⭐</span><h3 id="savedCount">0</h3>
+          <p>Saved careers</p>
+        </article>
+        <article class="stat-card">
+          <span>🎓</span><h3>Grades 9–12</h3>
+          <p>Student guidance</p>
+        </article>
+        <article class="stat-card">
+          <span>🗺️</span><h3>Explore</h3>
+          <p>Plan your future</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="assessment">
+      <div class="section-heading">
+        <p class="eyebrow">STEP 1</p>
+        <h2>Discover your interests</h2>
+        <p>Choose the topics and skills you enjoy. Select at least one from each group.</p>
+      </div>
+
+      <form id="assessmentForm" class="panel">
+        <h3>What interests you?</h3>
+        <div class="choices">
+          <label><input type="checkbox" name="interest" value="technology"> Technology and computers</label>
+          <label><input type="checkbox" name="interest" value="science"> Science and experiments</label>
+          <label><input type="checkbox" name="interest" value="business"> Business and finance</label>
+          <label><input type="checkbox" name="interest" value="creative"> Art and creativity</label>
+          <label><input type="checkbox" name="interest" value="helping"> Helping people</label>
+          <label><input type="checkbox" name="interest" value="nature"> Nature and environment</label>
+          <label><input type="checkbox" name="interest" value="communication"> Speaking and writing</label>
+          <label><input type="checkbox" name="interest" value="building"> Building and designing</label>
+        </div>
+
+        <h3>Which strengths describe you?</h3>
+        <div class="choices">
+          <label><input type="checkbox" name="strength" value="analytical"> Logical thinking</label>
+          <label><input type="checkbox" name="strength" value="creative"> Creative thinking</label>
+          <label><input type="checkbox" name="strength" value="communication"> Communication</label>
+          <label><input type="checkbox" name="strength" value="empathy"> Understanding people</label>
+          <label><input type="checkbox" name="strength" value="leadership"> Teamwork and leadership</label>
+          <label><input type="checkbox" name="strength" value="research"> Research and learning</label>
+        </div>
+
+        <button class="button" type="submit">Find My Career Matches →</button>
+        <p id="assessmentMessage" class="message" role="status"></p>
+      </form>
+
+      <div id="recommendations" class="cards"></div>
+    </section>
+
+    <section class="section" id="careers">
+      <div class="section-heading">
+        <p class="eyebrow">STEP 2</p>
+        <h2>Explore careers</h2>
+        <p>Learn about different careers before choosing a pathway.</p>
+      </div>
+
+      <input id="careerSearch" class="search" type="search"
+        placeholder="Search careers, e.g. design or technology..."
+        aria-label="Search careers">
+
+      <div id="careerList" class="cards"></div>
+    </section>
+
+    <section class="section" id="streams">
+      <div class="section-heading">
+        <p class="eyebrow">STEP 3</p>
+        <h2>Explore school streams</h2>
+        <p>Compare possible study directions after Grade 10.</p>
+      </div>
+
+      <div class="cards">
+        <article class="panel">
+          <div class="card-symbol">🔬</div>
+          <h3>Science</h3>
+          <p>Explore physics, chemistry, mathematics and biology, depending on your subject combination.</p>
+          <p><strong>Possible paths:</strong> Engineering, healthcare, computing and research.</p>
+        </article>
+        <article class="panel">
+          <div class="card-symbol">📊</div>
+          <h3>Commerce</h3>
+          <p>Explore business, economics, accountancy and finance.</p>
+          <p><strong>Possible paths:</strong> Business, accounting, finance and management.</p>
+        </article>
+        <article class="panel">
+          <div class="card-symbol">🌏</div>
+          <h3>Humanities</h3>
+          <p>Explore people, society, history, languages and culture.</p>
+          <p><strong>Possible paths:</strong> Law, education, media and social sciences.</p>
+        </article>
+      </div>
+      <p class="notice">Available subjects and eligibility vary by school, board and institution. Confirm requirements before making decisions.</p>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="section-heading">
+        <p class="eyebrow">STEP 4</p>
+        <h2>Plan your career roadmap</h2>
+        <p>Choose a career to see a starter plan for exploring it.</p>
+      </div>
+
+      <div class="panel">
+        <label for="roadmapCareer">Career to explore</label>
+        <select id="roadmapCareer">
+          <option>Software Developer</option>
+          <option>AI / Machine Learning</option>
+          <option>Engineer</option>
+          <option>Healthcare Professional</option>
+          <option>Business Analyst</option>
+          <option>Graphic Designer</option>
+          <option>Environmental Scientist</option>
+          <option>Journalist</option>
+        </select>
+        <button class="button" id="roadmapButton" type="button">Create My Roadmap →</button>
+        <div id="roadmapResult" class="roadmap"></div>
+      </div>
+    </section>
+
+    <section class="section" id="chatbot">
+      <div class="section-heading">
+        <p class="eyebrow">STEP 5</p>
+        <h2>Ask PathFinder</h2>
+        <p>Try our frontend demonstration of a career guidance chatbot.</p>
+      </div>
+
+      <div class="panel chat-panel">
+        <div class="chat-title"><span class="bot-icon">✦</span>
+          <div><h3>PathFinder AI</h3><p>Frontend demo · Not connected to real AI yet</p></div>
+        </div>
+        <div id="chatMessages" class="chat-messages" aria-live="polite">
+          <div class="bot-message">Hello! What career or subject would you like to explore?</div>
+        </div>
+        <div class="suggestions">
+          <button type="button" class="suggestion">I like biology but not medicine</button>
+          <button type="button" class="suggestion">Compare B.Tech and BCA</button>
+          <button type="button" class="suggestion">How do I choose a stream?</button>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" type="text" placeholder="Ask a career question..."
+            maxlength="500" aria-label="Your career question" required>
+          <button class="button" type="submit">Send ↑</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="section-heading">
+        <p class="eyebrow">STEP 6</p>
+        <h2>Trusted information sources</h2>
+        <p>Use official sources to verify current requirements and opportunities.</p>
+      </div>
+      <div class="cards">
+        <article class="panel">
+          <h3>University Grants Commission</h3>
+          <p>Use this official source to begin researching higher education and universities in India.</p>
+          <a href="https://www.ugc.gov.in/" target="_blank" rel="noopener noreferrer">Visit UGC →</a>
+        </article>
+        <article class="panel">
+          <h3>National Scholarship Portal</h3>
+          <p>Check official government scholarship information and application details.</p>
+          <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer">Visit portal →</a>
+        </article>
+        <article class="panel">
+          <h3>National Institutional Ranking Framework</h3>
+          <p>Explore published higher education institution rankings.</p>
+          <a href="https://www.nirfindia.org/" target="_blank" rel="noopener noreferrer">Visit NIRF →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section privacy-section">
+      <h2>Your privacy matters</h2>
+      <p>This starter website does not collect account information or connect to social media. Career matches are simple demonstrations, not predictions. Do not enter private or sensitive information into the demo chatbot.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#home">PathFinder<span>.AI</span></a>
+    <p>Discover Your Interests. Explore Your Careers. Plan Your Future.</p>
+    <p class="small">A student career exploration project · Demo version</p>
+  </footer>
+
+</body>
+</html>
